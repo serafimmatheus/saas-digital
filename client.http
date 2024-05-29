@@ -1,0 +1,12 @@
+@baseURL = http://localhost:3333/api/v1
+
+###
+
+POST {{baseURL}}/users
+content-type: application/json
+
+{
+    "name": "Serafim",
+    "email": "serafim@gmail.com",
+    "password": "12345678"
+}

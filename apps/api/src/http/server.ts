@@ -1,0 +1,30 @@
+import fastify from 'fastify'
+import fastifyCors from '@fastify/cors'
+import {
+  serializerCompiler,
+  validatorCompiler,
+  ZodTypeProvider,
+} from 'fastify-type-provider-zod'
+import { createAccount } from './routes/auth/create-account'
+
+const app = fastify().withTypeProvider<ZodTypeProvider>()
+
+app.setSerializerCompiler(serializerCompiler)
+app.setValidatorCompiler(validatorCompiler)
+
+app.register(fastifyCors)
+
+// auth routes
+app.register(createAccount)
+
+app
+  .listen({
+    port: 3333,
+    host: '0.0.0.0',
+  })
+  .then(() => {
+    console.log('Server is running on http://localhost:3333')
+  })
+  .catch((err) => {
+    console.error(err)
+  })
