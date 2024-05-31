@@ -7,6 +7,22 @@ content-type: application/json
 
 {
     "name": "Serafim",
-    "email": "serafim@gmail.com",
+    "email": "serafim@rocketseat.com.br",
     "password": "12345678"
 }
+
+###
+
+POST {{baseURL}}/session/password
+content-type: application/json
+
+{
+    "email": "serafim@rocketseat.com.br",
+    "password": "madagascar321"
+}
+
+###
+
+GET {{baseURL}}/profile
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbHdycnM1dXUwMDAwbWRka3ZyZWNlemhuIiwiaWF0IjoxNzE2OTg1Nzk4LCJleHAiOjE3MTcwMTA5OTh9.m6RXAdDyyJoMjmZHQCMvYlzVYXZ2y-COZG8C5sxPFj0
