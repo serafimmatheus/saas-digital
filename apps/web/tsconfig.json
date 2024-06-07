@@ -2,6 +2,7 @@
   "extends": "@saas/tsconfig/next.json",
   "compilerOptions": {
     "paths": {
+      "baseUrl": ["."],
       "@/*": ["./src/*"]
     }
   },
