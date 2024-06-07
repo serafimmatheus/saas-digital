@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "files": [
-    "library.json"
+    "library.json, next.json, node.json"
   ],
   "publishConfig": {
     "access": "public"
